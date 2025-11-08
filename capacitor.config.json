@@ -1,0 +1,23 @@
+{
+  "appId": "com.talos.app",
+  "appName": "Talos",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000,
+      "launchAutoHide": true,
+      "backgroundColor": "#1A1D3A",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": true,
+      "iosSpinnerStyle": "light",
+      "spinnerColor": "#ffffff"
+    },
+    "StatusBar": {
+      "style": "dark"
+    }
+  },
+  "ios": {
+    "contentInset": "always"
+  }
+}

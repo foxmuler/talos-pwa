@@ -1,0 +1,7 @@
+
+<resources>
+    <string name="app_name">Talos</string>
+    <string name="title_activity_main">Talos</string>
+    <string name="package_name">com.talos.app</string>
+    <string name="custom_url_scheme">com.talos.app</string>
+</resources>
