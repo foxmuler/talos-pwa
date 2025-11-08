@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { Movement, Settings, View, AppError, MovementOrigin } from './types';
 import * as db from './services/db';

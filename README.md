@@ -1,3 +1,4 @@
+
 # Talos - Expense Tracker PWA
 
 Talos is a Progressive Web App (PWA) designed to help users manage and control their monthly gasoline expenses. It features a clean, dark-themed UI with a prominent circular progress counter for at-a-glance budget tracking. The app allows for both manual expense entry and OCR-based scanning of receipts.
