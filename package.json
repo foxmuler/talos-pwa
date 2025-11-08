@@ -7,7 +7,7 @@
     "capacitor:sync": "npx cap sync",
     "capacitor:open:android": "npx cap open android",
     "capacitor:open:ios": "npx cap open ios",
-    "build:web": "(if exist www (rmdir /s /q www)) && mkdir www && xcopy public www /E /I /Y && copy index.html www && copy App.tsx www && copy index.tsx www && copy constants.tsx www && copy types.ts www && xcopy components www\\components /E /I /Y && xcopy services www\\services /E /I /Y",
+    "build:web": "rimraf www && mkdir www && copyfiles -u 1 public/* www && copyfiles index.html App.tsx index.tsx constants.tsx types.ts www && copyfiles -u 1 \"components/**/*.tsx\" www && copyfiles -u 1 \"services/**/*.ts\" www",
     "build:android-debug": "npm run build:web && npx cap sync android && (cd android && gradlew.bat assembleDebug)"
   },
   "dependencies": {
@@ -17,6 +17,8 @@
     "@capacitor/status-bar": "^6.0.0"
   },
   "devDependencies": {
-    "@capacitor/cli": "^6.0.0"
+    "@capacitor/cli": "^6.0.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.5"
   }
 }

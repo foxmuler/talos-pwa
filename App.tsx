@@ -184,6 +184,26 @@ const App: React.FC = () => {
         setAddModalOpen(false);
         setEditingMovement(null);
     };
+
+    const handleExportData = async () => {
+        try {
+            const allData = await db.getAllMovements();
+            const dataStr = JSON.stringify(allData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = `talos_export_${new Date().toISOString().slice(0,10)}.json`;
+    
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+            linkElement.remove();
+            setIsMenuOpen(false);
+        } catch (e) {
+            setError({ code: 'E-EXPORT-01', message: 'Error al exportar los datos.'});
+            console.error(e);
+        }
+    };
     
     const renderHome = () => (
         <div className="flex flex-col items-center justify-start h-full text-center p-4">
@@ -371,6 +391,14 @@ const App: React.FC = () => {
                             className="text-white block w-full text-left px-4 py-2 text-sm hover:bg-slate-700 rounded"
                           >
                             Ver Gráfica Mensual
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            onClick={handleExportData}
+                            className="text-white block w-full text-left px-4 py-2 text-sm hover:bg-slate-700 rounded"
+                          >
+                            Exportar Datos
                           </button>
                         </li>
                       </ul>
