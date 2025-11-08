@@ -7,7 +7,7 @@
     "capacitor:sync": "npx cap sync",
     "capacitor:open:android": "npx cap open android",
     "capacitor:open:ios": "npx cap open ios",
-    "build": "rimraf www && mkdir www && copyfiles -u 1 public/* www && copyfiles index.html App.tsx index.tsx constants.tsx types.ts www && copyfiles -u 1 \"components/**/*.tsx\" www && copyfiles -u 1 \"services/**/*.ts\" www",
+    "build": "rimraf www && mkdir www && copyfiles -u 1 public/* www && copyfiles index.html www && esbuild index.tsx --bundle --outfile=www/bundle.js --loader:.tsx=tsx --loader:.ts=ts --format=esm --external:react --external:react/* --external:react-dom/* --external:idb",
     "build:android-debug": "npm run build && npx cap sync android && (cd android && gradlew.bat assembleDebug)"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@capacitor/cli": "^6.0.0",
     "copyfiles": "^2.4.1",
+    "esbuild": "^0.20.2",
     "rimraf": "^5.0.5"
   }
 }

@@ -1,21 +1,12 @@
-
 const CACHE_NAME = 'talos-v1.6';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/bundle.js',
   '/manifest.webmanifest',
   '/capacitor.js',
   '/icon.svg',
   '/favicon.svg',
-  '/index.tsx',
-  '/App.tsx',
-  '/types.ts',
-  '/constants.tsx',
-  '/services/db.ts',
-  '/services/ocrService.ts',
-  '/components/CircularProgress.tsx',
-  '/components/Modal.tsx',
-  '/components/Graph.tsx',
   'https://cdn.tailwindcss.com'
 ];
 
