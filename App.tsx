@@ -407,9 +407,10 @@ const App: React.FC = () => {
                   )}
               </div>
               <div className="text-center">
-                <h1 className="text-lg font-bold uppercase tracking-widest text-white">
-                    Talos V {APP_VERSION}
+                <h1 className="text-2xl font-bold text-white uppercase tracking-widest">
+                    TALOS V {APP_VERSION}
                 </h1>
+                <p className="text-xs text-gray-500">By SySmcn ©2025</p>
               </div>
               <div className="w-10"></div>
             </header>
