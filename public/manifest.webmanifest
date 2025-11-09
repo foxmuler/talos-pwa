@@ -1,0 +1,24 @@
+{
+  "name": "Talos",
+  "short_name": "Talos",
+  "id": "com.talos.app",
+  "description": "Aplicación móvil para gestión de gastos personales y empresariales",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a3a52",
+  "theme_color": "#1a3a52",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
